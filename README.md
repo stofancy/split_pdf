@@ -71,16 +71,29 @@ python split_pdf.py input.pdf output.pdf [--splits 2|3] [--batch-size NUMBER]
 To create your own executable:
 
 1. Clone the repository
-2. Install PyInstaller:
+2. Install dependencies and PyInstaller:
    ```bash
+   pip install -r requirements.txt
    pip install pyinstaller
    ```
 3. Build the executable:
    ```bash
-   pyinstaller --onefile split_pdf.py --name pdf_splitter
+   pyinstaller pdf_splitter.spec
    ```
    
-The executable will be created in the `dist` folder.
+The executable will be created in the `dist` folder and copied to the `release` folder.
+
+## Project Structure
+
+```
+pdf_splitter/          # Main package directory
+├── __init__.py       # Package initialization and version
+├── cli.py           # Command-line interface
+├── config.py        # Configuration and constants
+├── image_processor.py # Image processing utilities
+├── pdf_processor.py  # PDF handling core functionality
+└── split_finder.py  # Page splitting algorithm
+```
 
 ## Notes
 
