@@ -6,7 +6,7 @@ This Windows application allows you to split PDF pages vertically into 2 or 3 pa
 
 ### Option 1: Using the Executable (Recommended)
 
-1. Download `pdf_splitter.exe` from the [Releases](../../releases) page
+1. Download `pdf_splitter.exe` from the [Releases](https://github.com/stofancy/split_pdf/releases/latest) page
 2. No additional installation needed - just run the executable
 3. No Python or other dependencies required
 
@@ -20,8 +20,8 @@ If you want to run from source or develop the application:
 
 2. Installation:
    ```bash
-   git clone [repository-url]
-   cd [repository-name]
+   git clone https://github.com/stofancy/split_pdf.git
+   cd split_pdf
    pip install -r requirements.txt
    ```
 
@@ -88,3 +88,20 @@ The executable will be created in the `dist` folder.
 - The output PDF will be optimized for A4 size
 - Progress will be shown during processing
 - Large PDF files may take some time to process
+
+## Releases
+
+Releases are managed through GitHub Releases. Each release includes:
+- Windows executable (`pdf_splitter.exe`)
+- Source code (zip and tar.gz)
+- Release notes describing changes
+
+To download the latest release:
+1. Go to the [Releases page](https://github.com/stofancy/split_pdf/releases)
+2. Download `pdf_splitter.exe` from the latest release
+3. Run the executable directly - no installation needed
+
+For developers:
+- Release versions follow [Semantic Versioning](https://semver.org/)
+- Each release is tagged in the repository
+- Release artifacts are built using PyInstaller with our custom spec file
