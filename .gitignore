@@ -1,0 +1,21 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Build directories and artifacts
+build/
+dist/
+*.spec
+
+# Generated files
+requirements_installed
+
+# Test PDFs and output files
+*_split*.pdf
+zy.pdf
+*.pdf
+
+# IDE settings
+.vscode/
+.idea/
