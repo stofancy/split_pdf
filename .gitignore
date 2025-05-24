@@ -6,7 +6,6 @@ __pycache__/
 # Build directories and artifacts
 build/
 dist/
-*.spec
 
 # Generated files
 requirements_installed
