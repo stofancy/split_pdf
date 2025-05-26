@@ -46,12 +46,9 @@ class PDFProcessor:
             sections.append(img.crop((start, 0, pos, img.height)))
             start = pos
         sections.append(img.crop((start, 0, img.width, img.height)))
-        
-        # Process each section
-        pdf_sections = []
+          # Process sections as a group
+        pdf_sections = ImageProcessor.process_section_group(sections, *target_dims, dpi)
         for section in sections:
-            pdf_byte_arr = ImageProcessor.process_section(section, *target_dims, dpi)
-            pdf_sections.append(pdf_byte_arr)
             del section
         
         # Clean up
