@@ -3,3 +3,5 @@ Pillow>=9.0.0
 PyPDF2>=3.0.0
 PyMuPDF>=1.19.0
 pyinstaller>=6.5.0
+pytest>=8.0.0
+pytest-cov>=4.1.0

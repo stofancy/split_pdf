@@ -12,7 +12,16 @@ class SplitFinder:
         
         Returns:
             List of split positions
+            
+        Raises:
+            ValueError: If num_splits is not 2 or 3
         """
+        if num_splits not in [2, 3]:
+            raise ValueError("Number of splits must be 2 or 3")
+            
+        if img_array.size == 0:
+            raise ValueError("Empty image array provided")
+
         # Calculate average brightness per column
         col_brightness = np.mean(img_array, axis=0)
         
